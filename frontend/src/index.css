@@ -130,13 +130,18 @@ table {
 .App {
   width: 100vw;
   height: 100vh;
+  font-family: 'Quicksand', sans-serif;
 }
 
-.navbar a {
+.navbar  {
   background-color: lightgrey;
   line-height: 5rem;
   display: flex;
   justify-content: center;
+  font-size: 2rem;
+}
+
+.link {
   text-decoration: none;
   color: black;
 }
