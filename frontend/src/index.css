@@ -146,4 +146,20 @@ table {
   color: black;
 }
 
+.reviews-container {
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.review-details {
+  text-align: center;
+  margin: 2rem auto;
+  width: 1000px;
+  border: 1px solid black;
+  padding: 2rem;
+}
+
 

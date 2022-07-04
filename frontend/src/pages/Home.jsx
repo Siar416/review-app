@@ -21,7 +21,7 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className="reviews-container">
       {reviews &&
         reviews.map((review) => (
           <ReviewDetails key={review._id} review={review} />
