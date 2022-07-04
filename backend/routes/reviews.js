@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
-const { getAllReviews } = require("../controllers/reviewsController");
+const { getReviews } = require("../controllers/reviewsController");
 
 // get all reviews
-router.get("/", getAllReviews);
+router.get("/", getReviews);
 
 // get single review
 // router.get("/:id", getReview);
