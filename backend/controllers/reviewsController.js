@@ -33,6 +33,39 @@ const getReview = async (req, res) => {
   }
 };
 
+// CREATE new review
+const createReview = async (req, res) => {
+  const { product, rating, review } = req.body;
+
+  let emptyFields = [];
+
+  if (!product) {
+    emptyFields.push("product");
+  }
+  if (!rating) {
+    emptyFields.push("rating");
+  }
+  if (!review) {
+    emptyFields.push("review");
+  }
+
+  if (emptyFields.length > 0) {
+    return res
+      .status(400)
+      .json({ error: "Please fill in all the fields", emptyFields });
+  }
+
+  // add doc to db
+  try {
+    const reviews = await Review.create({ product, rating, review });
+    res.status(200).json(reviews);
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
 module.exports = {
   getReviews,
+  getReview,
+  createReview,
 };
