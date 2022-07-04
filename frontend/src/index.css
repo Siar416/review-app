@@ -127,12 +127,18 @@ table {
   border-spacing: 0;
 }
 
-
-
 .App {
   width: 100vw;
   height: 100vh;
+}
+
+.navbar a {
+  background-color: lightgrey;
+  line-height: 5rem;
   display: flex;
   justify-content: center;
-  align-items: center;
+  text-decoration: none;
+  color: black;
 }
+
+
