@@ -5,6 +5,7 @@ const {
   getReview,
   createReview,
   deleteReview,
+  updateReview,
 } = require("../controllers/reviewsController");
 
 const router = express.Router();
@@ -20,5 +21,8 @@ router.post("/", createReview);
 
 // DELETE review
 router.delete("/:id", deleteReview);
+
+// UPDATE review
+router.patch("/:id", updateReview);
 
 module.exports = router;
