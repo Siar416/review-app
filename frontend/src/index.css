@@ -238,5 +238,13 @@ table {
   border-radius: 5px;
 }
 
+.error {
+  color: red;
+}
+
+.error-outline {
+  border: 3px solid red;
+}
+
 
 

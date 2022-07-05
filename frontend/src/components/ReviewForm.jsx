@@ -55,14 +55,20 @@ const ReviewForm = () => {
 
         <div className="form-inputs">
           <input
-            className="inputs"
+            className={
+              emptyFields.includes("product")
+                ? "inputs error-outline"
+                : "inputs"
+            }
             value={product}
             onChange={(e) => setProduct(e.target.value)}
             type="text"
             placeholder="Enter Item Name"
           />
           <input
-            className="inputs"
+            className={
+              emptyFields.includes("rating") ? "inputs error-outline" : "inputs"
+            }
             value={rating}
             onChange={(e) => setRating(e.target.value)}
             type="number"
@@ -71,7 +77,9 @@ const ReviewForm = () => {
             max="5"
           />
           <input
-            className="inputs"
+            className={
+              emptyFields.includes("review") ? "inputs error-outline" : "inputs"
+            }
             value={review}
             onChange={(e) => setReview(e.target.value)}
             type="text"
@@ -81,6 +89,7 @@ const ReviewForm = () => {
         <button onClick={handleSubmit} className="inputs">
           Submit Review
         </button>
+        <div className="error">{error && <h3>{error}</h3>}</div>
       </div>
     </form>
   );
