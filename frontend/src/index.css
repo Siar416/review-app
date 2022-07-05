@@ -189,6 +189,15 @@ table {
   width: 30%;
   border-radius: 10px;
   background-color: #4fa0e9;
+  position: relative;
+}
+
+.trash {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  top: 10px;
+  color: red;
 }
 
 

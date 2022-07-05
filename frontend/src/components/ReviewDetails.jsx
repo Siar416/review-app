@@ -47,7 +47,10 @@ const ReviewDetails = () => {
               <GoStar />
             </h4>
             <h2 className="review-item review">{review.review}</h2>
-            <BsFillTrashFill onClick={() => handleDelete(review._id)} />
+            <BsFillTrashFill
+              className="trash"
+              onClick={() => handleDelete(review._id)}
+            />
           </div>
         ))}
     </>
