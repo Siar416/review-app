@@ -146,13 +146,6 @@ table {
   color: black;
 }
 
-/* .reviews-container {
-  background-color: aqua;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-} */
-
 .main-page {
   height: 90%;
   overflow: hidden;
@@ -182,6 +175,31 @@ table {
   width: 1000px;
   border: 1px solid black;
   padding: 2rem;
+}
+
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  margin: 30px auto;
+  padding: 20px;
+  width: 30%;
+  border-radius: 10px;
+}
+
+
+
+.review-item {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 10px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 900;
 }
 
 
