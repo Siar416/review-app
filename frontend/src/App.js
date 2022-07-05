@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import ReviewDetails from "./components/ReviewDetails";
+import ReviewForm from "./components/ReviewForm";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/reviews-list" element={<ReviewDetails />} />
+          <Route path="/create-review" element={<ReviewForm />} />
         </Routes>
       </BrowserRouter>
     </div>
