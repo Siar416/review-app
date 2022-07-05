@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useReviewContext } from "../hooks/useReviewContext";
 import { GoStar } from "react-icons/go";
+import { BsFillTrashFill } from "react-icons/bs";
 
 const ReviewDetails = () => {
   const { reviews, dispatch } = useReviewContext();
@@ -20,6 +21,21 @@ const ReviewDetails = () => {
     fetchReviews();
   }, [dispatch]);
 
+  const handleDelete = async (id) => {
+    const response = await fetch(`/api/reviews/${id}`, {
+      method: "DELETE",
+    });
+
+    const json = await response.json();
+
+    if (response.ok) {
+      dispatch({
+        type: "DELETE_REVIEW",
+        payload: json,
+      });
+    }
+  };
+
   return (
     <>
       {reviews &&
@@ -31,6 +47,7 @@ const ReviewDetails = () => {
               <GoStar />
             </h4>
             <h2 className="review-item review">{review.review}</h2>
+            <BsFillTrashFill onClick={() => handleDelete(review._id)} />
           </div>
         ))}
     </>
