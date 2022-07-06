@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import { useReviewContext } from "../hooks/useReviewContext";
 import { GoStar } from "react-icons/go";
 import { BsFillTrashFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
+
+import formatDistanceToNow from "date-fns/formatDistanceToNow";
 
 const ReviewDetails = () => {
   const { reviews, dispatch } = useReviewContext();
@@ -57,6 +58,11 @@ const ReviewDetails = () => {
               className="trash"
               onClick={() => handleDelete(review._id)}
             />
+            <p className="date">
+              {formatDistanceToNow(new Date(review.createdAt), {
+                addSuffix: true,
+              })}
+            </p>
           </div>
         ))}
     </>

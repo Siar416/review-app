@@ -5,7 +5,8 @@ const AboutMe = () => {
         <h1>Hello World! My name is Siar</h1>
         <br />
         <p>
-          I'm an aspiring who enjoys solving problems with code. <br />
+          I'm an aspiring Web Developer who enjoys solving problems with code.{" "}
+          <br />
           <br />
           Our lives are becoming more dependent on technology. My dream is to
           help carve the path forward by building dynamic and responsive web
