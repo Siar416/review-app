@@ -141,8 +141,9 @@ a {
   background-color: #4fa0e9;
   line-height: 5rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   font-size: 2rem;
+  
 }
 
 .link {
@@ -163,12 +164,12 @@ a {
 }
 
 .link-botton {
-  border: 1px solid black;
-  padding: 20px;
-  margin: 20px;
+  border: .0625rem solid black;
+  padding: 1.25rem;
+  margin: 1.25rem;
   text-decoration: none;
   color: black;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   text-align: center;
   font-weight: 900;
   
@@ -177,8 +178,8 @@ a {
 .review-details {
   text-align: center;
   margin: 2rem auto;
-  width: 1000px;
-  border: 1px solid black;
+  width: 62.5rem;
+  border: .0625rem solid black;
   padding: 2rem;
 }
 
@@ -187,11 +188,11 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
-  margin: 30px auto;
-  padding: 20px;
+  border: .0625rem solid black;
+  margin: 1.875rem auto;
+  padding: 1.25rem;
   width: 30%;
-  border-radius: 10px;
+  border-radius: .625rem;
   background-color: #ededed;
   position: relative;
 }
@@ -199,15 +200,15 @@ a {
 .trash {
   position: absolute;
   top: 0;
-  right: 10px;
-  top: 10px;
+  right: .625rem;
+  top: .625rem;
   color: red;
 }
 
 .review-item {
   font-size: 1.2rem;
   font-weight: 400;
-  margin: 10px;
+  margin: .625rem;
 }
 
 .title {
@@ -223,13 +224,13 @@ a {
 }
 
 .form-container {
-  border: 1px solid black;
+  border: .0625rem solid black;
   display: flex;
   flex-direction: column;
-  padding: 20px 50px ;
+  padding: 1.25rem 3.125rem ;
   justify-content: space-around;
-  height: 430px;
-  border-radius: 20px;
+  height: 26.875rem;
+  border-radius: 1.25rem;
   background-color: #ededed;
 }
 
@@ -245,10 +246,10 @@ a {
 }
 
 .inputs {
-  margin: 10px;
-  border-radius: 5px;
+  margin: .625rem;
+  border-radius: .3125rem;
   line-height: 2rem;
-  width: 280px;
+  width: 17.5rem;
   font-family: 'Quicksand', sans-serif;
   font-weight: 900;
 }
@@ -258,8 +259,25 @@ a {
 }
 
 .error-outline {
-  border: 3px solid red;
+  border: .1875rem solid red;
 }
+
+.about-section {
+  border: .0625rem solid black;
+  min-height: 25rem;
+  max-width: 50rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-top: 5rem;
+  padding: 1.875rem;
+  border-radius: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  box-shadow: 10px 10px;
+}
+
+
 
 
 
