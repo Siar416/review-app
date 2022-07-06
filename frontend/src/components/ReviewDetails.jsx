@@ -48,7 +48,11 @@ const ReviewDetails = () => {
               <GoStar />
             </h4>
             <h2 className="review-item review">{review.review}</h2>
-            {review.url && <Link to={review.url}>{review.url}</Link>}
+            {review.url && (
+              <a target="_blank" href={review.url}>
+                {review.url}
+              </a>
+            )}
             <BsFillTrashFill
               className="trash"
               onClick={() => handleDelete(review._id)}
