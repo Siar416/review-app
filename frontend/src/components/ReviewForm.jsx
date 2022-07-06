@@ -78,7 +78,7 @@ const ReviewForm = () => {
             min="0"
             max="5"
           />
-          <input
+          <textarea
             className={
               emptyFields.includes("review") ? "inputs error-outline" : "inputs"
             }
@@ -98,7 +98,7 @@ const ReviewForm = () => {
             pattern="https://."
           />
         </div>
-        <button onClick={handleSubmit} className="inputs">
+        <button onClick={handleSubmit} className="inputs submit">
           Submit Review
         </button>
         <div className="error">{error && <h3>{error}</h3>}</div>
