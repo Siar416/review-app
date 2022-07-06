@@ -137,12 +137,15 @@ a {
   --card-form-background-color: #ededed;
   --error-color: #fc3103;
   --submit-button: #207849;
+  --rating: #f5ea05;
+  --app-background-color: #edede1;
 }
 
 .App {
   width: 100vw;
   height: 100vh;
   font-family: 'Quicksand', sans-serif;
+  background-color: var(--app-background-color);
 }
 
 .navbar  {
@@ -189,6 +192,7 @@ a {
   border-radius: 1.25rem;
   text-align: center;
   font-weight: 900;
+  background-color: white;
 }
 
 .link-botton:hover {
@@ -309,7 +313,8 @@ a {
   border-radius: 1.25rem;
   font-weight: 400;
   line-height: 1.5625rem;
-  box-shadow: 10px 10px;
+  box-shadow: .625rem .625rem;
+  background-color: white;
 }
 
 .about-section-active {
@@ -317,7 +322,7 @@ a {
 }
 
 .date {
-  margin-top: 20px;
+  margin-top: 1.25rem;
   font-weight: 900;
 }
 
@@ -325,12 +330,12 @@ a {
   position: absolute;
   color: green;
   font-size: 2rem;
-  left: 10px;
+  left: .625rem;
   bottom: 0;
 }
 
 .star {
-  color: #f5ea05;
+  color: var(--rating);
   stroke: black;
   stroke-width: .0313rem;
 }

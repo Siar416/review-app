@@ -8,8 +8,6 @@ const UpdateReview = () => {
   const navigate = useNavigate();
   const params = useParams();
 
-  console.log(params.id);
-
   const [product, setProduct] = useState("");
   const [rating, setRating] = useState(null);
   const [review, setReview] = useState("");
