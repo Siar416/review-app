@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useReviewContext } from "../hooks/useReviewContext";
 import { GoStar } from "react-icons/go";
 import { BsFillTrashFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const ReviewDetails = () => {
   const { reviews, dispatch } = useReviewContext();
@@ -47,6 +48,7 @@ const ReviewDetails = () => {
               <GoStar />
             </h4>
             <h2 className="review-item review">{review.review}</h2>
+            {review.url && <Link to={review.url}>{review.url}</Link>}
             <BsFillTrashFill
               className="trash"
               onClick={() => handleDelete(review._id)}

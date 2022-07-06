@@ -7,9 +7,10 @@ const ReviewForm = () => {
   const navigate = useNavigate();
 
   const [product, setProduct] = useState("");
-  const [rating, setRating] = useState(0);
+  const [rating, setRating] = useState(null);
   const [review, setReview] = useState("");
   const [error, setError] = useState(null);
+  const [url, setUrl] = useState("");
   const [emptyFields, setEmptyFields] = useState([]);
 
   const handleSubmit = (e) => {
@@ -21,7 +22,7 @@ const ReviewForm = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ product, rating, review }),
+        body: JSON.stringify({ product, rating, review, url }),
       });
       const json = await response.json();
 
@@ -34,6 +35,7 @@ const ReviewForm = () => {
         setRating(0);
         setReview("");
         setError(null);
+        setUrl("");
         setEmptyFields([]);
         console.log("Review has been added", json);
         dispatch({
@@ -84,6 +86,16 @@ const ReviewForm = () => {
             onChange={(e) => setReview(e.target.value)}
             type="text"
             placeholder="Enter Review"
+          />
+          <input
+            className={
+              emptyFields.includes("url") ? "inputs error-outline" : "inputs"
+            }
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
+            type="url"
+            placeholder="https://example.com"
+            pattern="https://."
           />
         </div>
         <button onClick={handleSubmit} className="inputs">
