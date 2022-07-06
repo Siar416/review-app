@@ -48,7 +48,7 @@ const ReviewDetails = () => {
             <h1 className="review-item title">{review.product}</h1>
             <h4 className="review-item rating">
               {review.rating}
-              <GoStar />
+              <GoStar className="star" />
             </h4>
             <h2 className="review-item review">{review.review}</h2>
             {review.url && (
@@ -65,9 +65,6 @@ const ReviewDetails = () => {
                 addSuffix: true,
               })}
             </p>
-            {/* <button>
-              <Link to={`/edit-review/${review._id}`}>Edit Me</Link>
-            </button> */}
 
             <Link className="edit" to={`/edit-review/${review._id}`}>
               <AiFillEdit />

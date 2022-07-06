@@ -231,6 +231,7 @@ a {
   font-size: 1.2rem;
   font-weight: 400;
   margin: .625rem;
+  display: flex;
 }
 
 .title {
@@ -320,6 +321,12 @@ a {
   font-size: 2rem;
   left: 10px;
   bottom: 0;
+}
+
+.star {
+  color: #f5ea05;
+  stroke: black;
+  stroke-width: .0313rem;
 }
 
 
