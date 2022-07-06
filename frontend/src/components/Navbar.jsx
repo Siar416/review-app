@@ -7,7 +7,7 @@ function Navbar() {
         <h1>Product Review App</h1>
       </Link>
 
-      <Link className="link" to="/about-me">
+      <Link className="link about-active" to="/about-me">
         <h1>About me</h1>
       </Link>
     </header>

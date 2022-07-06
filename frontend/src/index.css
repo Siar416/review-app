@@ -131,6 +131,14 @@ a {
   text-decoration: none;
 }
 
+:root {
+  --active-color: #fcb103;
+  --navbar-color: #4fa0e9;
+  --card-form-background-color: #ededed;
+  --error-color: #fc3103;
+  --submit-button: #207849;
+}
+
 .App {
   width: 100vw;
   height: 100vh;
@@ -138,7 +146,7 @@ a {
 }
 
 .navbar  {
-  background-color: #4fa0e9;
+  background-color: var(--navbar-color);
   line-height: 5rem;
   display: flex;
   justify-content: space-evenly;
@@ -149,6 +157,15 @@ a {
 .link {
   text-decoration: none;
   color: #ededed;
+}
+
+.about-active:focus {
+  color: var(--active-color);
+  text-decoration: overline;
+}
+
+.link-active {
+  text-decoration: overline;
 }
 
 .main-page {
@@ -172,7 +189,11 @@ a {
   border-radius: 1.25rem;
   text-align: center;
   font-weight: 900;
-  
+}
+
+.link-botton:hover {
+  background-color: var(--navbar-color);
+  color: white;
 }
 
 .review-details {
@@ -193,7 +214,7 @@ a {
   padding: 1.25rem;
   width: 30%;
   border-radius: .625rem;
-  background-color: #ededed;
+  background-color: var(--card-form-background-color);
   position: relative;
 }
 
@@ -231,7 +252,7 @@ a {
   justify-content: space-around;
   height: 26.875rem;
   border-radius: 1.25rem;
-  background-color: #ededed;
+  background-color: var(--card-form-background-color);
 }
 
 .form-title {
@@ -248,18 +269,24 @@ a {
 .inputs {
   margin: .625rem;
   border-radius: .3125rem;
-  line-height: 2rem;
+  height: 3.125rem;
   width: 17.5rem;
   font-family: 'Quicksand', sans-serif;
   font-weight: 900;
 }
 
+.submit {
+  background-color: var(--submit-button);
+  color: white;
+}
+
 .error {
-  color: red;
+  color: var(--error-color);
+  text-align: center;
 }
 
 .error-outline {
-  border: .1875rem solid red;
+  border: .1875rem solid var(--error-color);
 }
 
 .about-section {
