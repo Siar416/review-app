@@ -234,6 +234,12 @@ a {
   display: flex;
 }
 
+.rating {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 .title {
   font-size: 1.5rem;
   font-weight: 900;
