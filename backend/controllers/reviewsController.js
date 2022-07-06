@@ -35,7 +35,7 @@ const getReview = async (req, res) => {
 
 // CREATE new review
 const createReview = async (req, res) => {
-  const { product, rating, review } = req.body;
+  const { product, rating, review, url } = req.body;
 
   let emptyFields = [];
 
@@ -48,6 +48,9 @@ const createReview = async (req, res) => {
   if (!review) {
     emptyFields.push("review");
   }
+  if (!url) {
+    emptyFields.push("url");
+  }
 
   if (emptyFields.length > 0) {
     return res
@@ -57,7 +60,7 @@ const createReview = async (req, res) => {
 
   // add doc to db
   try {
-    const reviews = await Review.create({ product, rating, review });
+    const reviews = await Review.create({ product, rating, review, url });
     res.status(200).json(reviews);
   } catch (error) {
     res.status(400).json({ error: error.message });
