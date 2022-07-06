@@ -224,6 +224,7 @@ a {
   right: .625rem;
   top: .625rem;
   color: red;
+  font-size: 1.5rem;
 }
 
 .review-item {
@@ -311,6 +312,14 @@ a {
 .date {
   margin-top: 20px;
   font-weight: 900;
+}
+
+.edit {
+  position: absolute;
+  color: green;
+  font-size: 2rem;
+  left: 10px;
+  bottom: 0;
 }
 
 

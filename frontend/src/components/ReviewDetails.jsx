@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { useReviewContext } from "../hooks/useReviewContext";
 import { GoStar } from "react-icons/go";
 import { BsFillTrashFill } from "react-icons/bs";
+import { AiFillEdit } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 import formatDistanceToNow from "date-fns/formatDistanceToNow";
 
@@ -63,6 +65,13 @@ const ReviewDetails = () => {
                 addSuffix: true,
               })}
             </p>
+            {/* <button>
+              <Link to={`/edit-review/${review._id}`}>Edit Me</Link>
+            </button> */}
+
+            <Link className="edit" to={`/edit-review/${review._id}`}>
+              <AiFillEdit />
+            </Link>
           </div>
         ))}
     </>
