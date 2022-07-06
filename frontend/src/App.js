@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import ReviewDetails from "./components/ReviewDetails";
 import ReviewForm from "./components/ReviewForm";
 import AboutMe from "./pages/AboutMe";
+import UpdateReview from "./components/UpdateReview";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/reviews-list" element={<ReviewDetails />} />
           <Route path="/create-review" element={<ReviewForm />} />
+          <Route path="/edit-review/:id" element={<UpdateReview />} />
           <Route path="/about-me" element={<AboutMe />} />
         </Routes>
       </BrowserRouter>

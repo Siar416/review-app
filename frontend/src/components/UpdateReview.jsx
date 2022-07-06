@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useReviewContext } from "../hooks/useReviewContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-const ReviewForm = () => {
+const UpdateReview = () => {
   const { reviews, dispatch } = useReviewContext();
 
   const navigate = useNavigate();
+  const params = useParams();
+
+  console.log(params.id);
 
   const [product, setProduct] = useState("");
   const [rating, setRating] = useState(null);
@@ -14,12 +17,24 @@ const ReviewForm = () => {
   const [url, setUrl] = useState("");
   const [emptyFields, setEmptyFields] = useState([]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      let response = await fetch(`/api/reviews/${params.id}`);
+      let json = await response.json();
+      setProduct(json.product);
+      setRating(json.rating);
+      setReview(json.review);
+      setUrl(json.url);
+    };
+    fetchData();
+  }, []);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const postData = async () => {
-      const response = await fetch("/api/reviews", {
-        method: "POST",
+      const response = await fetch(`/api/reviews/${params.id}`, {
+        method: "PATCH",
         headers: {
           "Content-Type": "application/json",
         },
@@ -53,7 +68,7 @@ const ReviewForm = () => {
     <form className="form-wrapper">
       <div className="form-container">
         <div className="form-title">
-          <h1>Review Form</h1>
+          <h1>Update Review</h1>
         </div>
 
         <div className="form-inputs">
@@ -100,7 +115,7 @@ const ReviewForm = () => {
           />
         </div>
         <button onClick={handleSubmit} className="inputs submit">
-          Submit Review
+          Submit Update
         </button>
         <div className="error">{error && <h3>{error}</h3>}</div>
       </div>
@@ -108,4 +123,4 @@ const ReviewForm = () => {
   );
 };
 
-export default ReviewForm;
+export default UpdateReview;
