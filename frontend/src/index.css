@@ -130,6 +130,7 @@ table {
 a {
   text-decoration: none;
   word-break: break-all;
+  color: blue;
 }
 
 :root {
