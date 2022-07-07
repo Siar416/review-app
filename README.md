@@ -7,9 +7,9 @@ Developed with React on the frontend and Node and Express on the backend.
 
 ## Screen Shots
 
-![App screen shot 1](src/assets/review-app-screen-shot1.JPG)
-![App screen shot 2](src/assets/review-app-screen-shot2.JPG)
-![App screen shot 3](src/assets/review-app-screen-shot3.JPG)
+![App screen shot 1](frontend/src/assets/review-app-screen-shot1.JPG)
+![App screen shot 2](frontend/src/assets/review-app-screen-shot2.JPG)
+![App screen shot 3](frontend/src/assets/review-app-screen-shot3.JPG)
 
 ## Installation
 
