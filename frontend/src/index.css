@@ -129,6 +129,7 @@ table {
 
 a {
   text-decoration: none;
+  word-break: break-all;
 }
 
 :root {
