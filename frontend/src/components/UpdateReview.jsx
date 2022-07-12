@@ -53,7 +53,7 @@ const UpdateReview = () => {
         setEmptyFields([]);
         console.log("Review has been added", json);
         dispatch({
-          type: "CREATE_REVIEW",
+          type: "UPDATE_REVIEW",
           payload: json,
         });
         navigate("/reviews-list");

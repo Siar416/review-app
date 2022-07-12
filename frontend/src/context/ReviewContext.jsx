@@ -18,6 +18,10 @@ export const reviewReducer = (state, action) => {
           (review) => review._id !== action.payload._id
         ),
       };
+    case "UPDATE_REVIEW":
+      return {
+        reviews: [action.payload],
+      };
     default:
       return state;
   }

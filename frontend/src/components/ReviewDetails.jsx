@@ -61,7 +61,7 @@ const ReviewDetails = () => {
               onClick={() => handleDelete(review._id)}
             />
             <p className="date">
-              {formatDistanceToNow(new Date(review.createdAt), {
+              {formatDistanceToNow(new Date(review.updatedAt), {
                 addSuffix: true,
               })}
             </p>
