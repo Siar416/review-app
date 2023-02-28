@@ -10,8 +10,6 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
-  "proxy": "http://localhost:3000",
-  "homepage": ".",
   "keywords": [],
   "author": "",
   "license": "ISC",
