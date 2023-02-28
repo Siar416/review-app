@@ -18,7 +18,7 @@ const ReviewForm = () => {
     e.preventDefault();
 
     const postData = async () => {
-      const response = await fetch("/api/reviews", {
+      const response = await fetch(process.env.REACT_APP_BACKEND_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

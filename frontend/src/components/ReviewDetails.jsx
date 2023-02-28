@@ -10,9 +10,12 @@ import formatDistanceToNow from "date-fns/formatDistanceToNow";
 const ReviewDetails = () => {
   const { reviews, dispatch } = useReviewContext();
 
+  console.log(process.env.REACT_APP_BACKEND_URL);
+
   useEffect(() => {
     const fetchReviews = async () => {
-      const response = await fetch("/api/reviews");
+      const response = await fetch(process.env.REACT_APP_BACKEND_URL);
+
       const json = await response.json();
 
       if (response.ok) {
@@ -26,7 +29,7 @@ const ReviewDetails = () => {
   }, [dispatch]);
 
   const handleDelete = async (id) => {
-    const response = await fetch(`/api/reviews/${id}`, {
+    const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/${id}`, {
       method: "DELETE",
     });
 

@@ -17,7 +17,9 @@ const UpdateReview = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      let response = await fetch(`/api/reviews/${params.id}`);
+      let response = await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}/${params.id}`
+      );
       let json = await response.json();
       setProduct(json.product);
       setRating(json.rating);
@@ -31,13 +33,16 @@ const UpdateReview = () => {
     e.preventDefault();
 
     const postData = async () => {
-      const response = await fetch(`/api/reviews/${params.id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ product, rating, review, url }),
-      });
+      const response = await fetch(
+        `${process.env.REACT_APP_BACKEND_URL}/${params.id}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ product, rating, review, url }),
+        }
+      );
       const json = await response.json();
 
       if (!response.ok) {
